@@ -6,63 +6,127 @@ const sections = document.querySelectorAll('section[id]');
 const contactForm = document.getElementById('contactForm');
 const appModeTabs = [...document.querySelectorAll('.app-mode-tab')];
 const appPreview = document.getElementById('app-preview');
+const appEnterButton = document.getElementById('appEnterButton');
 const ecosystemNodes = [...document.querySelectorAll('.ecosystem-node')];
 const ecosystemDetail = document.querySelector('.ecosystem-detail');
+const heroLogoCycle = document.getElementById('heroLogoCycle');
 
 const appModes = {
-  tutor: {
+  easy: {
     label: 'Connect Easy',
     title: 'Cuidado completo na palma da mão.',
-    text: 'Encontre profissionais próximos, acompanhe seus animais e organize os próximos cuidados.',
-    highlights: ['Busca por proximidade', 'Carteira do animal', 'Agenda de cuidados'],
-    greeting: 'Olá, Marcia!',
+    text: 'Tutores encontram profissionais, organizam animais, documentos, exames e agendamentos em uma jornada simples.',
+    highlights: ['Cadastro de pet', 'Exames e receitas', 'Emergência rápida'],
+    loginTitle: 'Connect Easy',
+    loginText: 'Cuidar de quem voce ama ficou muito mais facil.',
+    loginButton: 'Entrar',
+    greeting: 'Olá, Amanda!',
     headline: 'Como podemos cuidar hoje?',
-    avatar: 'M',
-    search: 'Buscar veterinários e serviços',
-    quickActions: [['✚', 'Veterinário'], ['⌖', 'Próximos'], ['▣', 'Agenda'], ['♡', 'Cuidados']],
-    cardHeading: 'Profissionais perto de você',
-    resultAvatar: 'CV',
-    resultTitle: 'Clínica Vet Center',
-    resultMeta: '1,2 km • Aberto agora',
-    resultBadge: '★ 4,9 atendimento',
-    alertTitle: 'Próximo cuidado',
-    alertText: 'Vacina da Mel em 4 dias'
+    avatar: 'A',
+    heroTitle: 'Precisando de ajuda?',
+    heroText: 'Encontre os melhores profissionais perto de você.',
+    heroAction: 'Buscar agora',
+    heroVisual: 'Rex',
+    quickActions: [['heart', 'Cadastro de pet'], ['file', 'Exames e receitas'], ['bolt', 'Emergência'], ['pin', 'Profissionais']],
+    cardHeading: 'Próximos compromissos',
+    resultAvatar: 'R',
+    resultTitle: 'Consulta do Rex',
+    resultMeta: 'Hoje, 15:30 • Dr. Lucas Ferreira',
+    resultBadge: 'Confirmado',
+    alertTitle: 'Carteira de vacinação',
+    alertText: 'Ver carteirinha completa',
+    alertIcon: 'heart',
+    navItems: ['Início', 'Serviços', 'Mensagens', 'Perfil'],
+    tools: [
+      {
+        icon: 'heart',
+        title: 'Cadastro de pet',
+        text: 'Crie perfis completos para cada animal com dados, cuidados, vacinas e observações importantes.',
+        bullets: ['Dados do animal', 'Historico de cuidados', 'Carteira organizada']
+      },
+      {
+        icon: 'file',
+        title: 'Exames e receitas',
+        text: 'Receba documentos enviados por profissionais e mantenha tudo salvo na conta do tutor.',
+        bullets: ['PDFs recebidos', 'Resultados de exames', 'Receitas por pet']
+      },
+      {
+        icon: 'bolt',
+        title: 'Botão de emergência',
+        text: 'Acione ajuda rapidamente e encontre profissionais disponiveis para atendimentos urgentes.',
+        bullets: ['Contato rapido', 'Localizacao', 'Profissionais 24h']
+      },
+      {
+        icon: 'pin',
+        title: 'Encontrar profissionais',
+        text: 'Busque veterinarios e servicos proximos por localizacao, especialidade e disponibilidade.',
+        bullets: ['Mapa proximo', 'Filtros', 'Perfil verificado']
+      }
+    ]
   },
   profissional: {
     label: 'Connect Professional',
     title: 'Sua rotina profissional mais inteligente.',
-    text: 'Organize a agenda, receba chamados e fortaleça sua presença em uma rede especializada.',
-    highlights: ['Agenda integrada', 'Chamados na região', 'Perfil profissional'],
-    greeting: 'Olá, Dra. Brenda!',
-    headline: 'Sua agenda está pronta.',
-    avatar: 'B',
-    search: 'Buscar clientes, animais ou serviços',
-    quickActions: [['▣', 'Agenda'], ['⚡', 'Chamados'], ['◇', 'Clientes'], ['✚', 'Receitas']],
-    cardHeading: 'Próximos atendimentos',
-    resultAvatar: 'M',
-    resultTitle: 'Consulta da Mel',
-    resultMeta: 'Hoje, 14:30 • Domiciliar',
-    resultBadge: 'Tutor confirmado',
-    alertTitle: 'Novo chamado na região',
-    alertText: 'Atendimento disponível a 2,4 km'
-  },
-  solidario: {
-    label: 'Connect Vet Solidário',
-    title: 'Boas conexões transformam destinos.',
-    text: 'Descubra campanhas, adoções e formas de apoiar quem atua todos os dias pela causa animal.',
-    highlights: ['Adoções responsáveis', 'Campanhas verificadas', 'Rede de voluntários'],
-    greeting: 'Olá, Lucia!',
-    headline: 'Vamos transformar uma vida?',
-    avatar: 'L',
-    search: 'Buscar campanhas, ONGs e adoções',
-    quickActions: [['♡', 'Adoções'], ['◎', 'Campanhas'], ['♧', 'Doações'], ['+', 'Voluntários']],
-    cardHeading: 'Campanhas em destaque',
-    resultAvatar: 'A',
-    resultTitle: 'AATAN precisa de apoio',
-    resultMeta: 'Campanha verificada • Sorocaba',
-    resultBadge: '72% da meta alcançada',
-    alertTitle: 'Uma nova chance',
-    alertText: 'Bidu está disponível para adoção'
+    text: 'Profissionais recebem chamados, gerenciam clientes, receitas, exames, comunidade e impacto solidário.',
+    highlights: ['Rotas e agenda', 'Exames e receitas', 'Eu Solidário'],
+    loginTitle: 'Connect Professional',
+    loginText: 'Conectando profissionais a oportunidades em todo o Brasil.',
+    loginButton: 'Entrar',
+    greeting: 'Olá, Dr. Lucas!',
+    headline: 'Você está disponível.',
+    avatar: 'LF',
+    heroTitle: 'Chamados próximos',
+    heroText: 'Atendimento clínico a 2,8 km de você.',
+    heroAction: 'Aceitar',
+    heroVisual: '26',
+    quickActions: [['pin', 'Rota'], ['calendar', 'Agenda'], ['file', 'Exames'], ['users', 'Perfil'], ['heart', 'Solidário'], ['bolt', 'Emergência']],
+    cardHeading: 'Estatísticas do mês',
+    resultAvatar: '14',
+    resultTitle: 'Novos clientes',
+    resultMeta: '+12% neste mês',
+    resultBadge: 'Avaliação média 4,9',
+    alertTitle: 'Ganhos',
+    alertText: 'R$ 8.450 este mês',
+    alertIcon: 'bolt',
+    navItems: ['Home', 'Ferramentas', 'Comunidade', 'Chat', 'Perfil'],
+    tools: [
+      {
+        icon: 'pin',
+        title: 'Planejamento de rota',
+        text: 'Organize atendimentos por proximidade, otimize deslocamentos e reduza tempo entre chamados.',
+        bullets: ['Rota otimizada', 'Tempo estimado', 'Atendimentos proximos']
+      },
+      {
+        icon: 'calendar',
+        title: 'Agendamento',
+        text: 'Controle consultas, retornos, visitas domiciliares e disponibilidade profissional em tempo real.',
+        bullets: ['Agenda do dia', 'Confirmacoes', 'Lembretes']
+      },
+      {
+        icon: 'file',
+        title: 'Exames e receitas',
+        text: 'Emita receitas, envie exames e mantenha historicos clinicos vinculados ao tutor e ao animal.',
+        bullets: ['Nova receita', 'Novo exame', 'Gerar PDF']
+      },
+      {
+        icon: 'users',
+        title: 'Perfil profissional',
+        text: 'Apresente especialidades, avaliacoes, portfolio, areas atendidas e dados de verificacao.',
+        bullets: ['Portfolio', 'Avaliacoes', 'Perfil verificado']
+      },
+      {
+        icon: 'heart',
+        title: 'Eu Solidário',
+        text: 'Registre horas voluntarias, apoie projetos e acompanhe seu impacto social dentro da rede.',
+        bullets: ['Horas dedicadas', 'Projetos apoiados', 'Selos de impacto']
+      },
+      {
+        icon: 'bolt',
+        title: 'Chamado de emergência',
+        text: 'Receba solicitacoes urgentes da regiao e aceite atendimentos conforme disponibilidade.',
+        bullets: ['Chamado proximo', 'Aceite rapido', 'Contato imediato']
+      }
+    ]
   }
 };
 
@@ -123,8 +187,51 @@ const ecosystemContent = {
   }
 };
 
-let currentAppMode = 'tutor';
+let currentAppMode = 'easy';
+let currentAppToolIndex = 0;
 let appModeInterval;
+
+const heroLogoVariants = [
+  { src: 'assets/svg/Mescla_1.svg', alt: 'Connect Vet do Brasil' },
+  { src: 'assets/svg/P_B.svg', alt: 'Connect Vet do Brasil' },
+  { src: 'assets/svg/Solidario.svg', alt: 'Connect Vet Solidário' }
+];
+
+let currentHeroLogoIndex = 0;
+
+heroLogoVariants.forEach(({ src }) => {
+  const image = new Image();
+  image.src = src;
+});
+
+function setHeroLogo(index) {
+  const logo = heroLogoCycle?.querySelector('img');
+  if (!heroLogoCycle || !logo) {
+    return;
+  }
+
+  const variant = heroLogoVariants[index];
+  heroLogoCycle.classList.remove('logo-changing');
+  void heroLogoCycle.offsetWidth;
+  heroLogoCycle.classList.add('logo-changing');
+  logo.src = variant.src;
+  logo.alt = variant.alt;
+  heroLogoCycle.dataset.logoIndex = String(index + 1);
+}
+
+heroLogoCycle?.addEventListener('click', () => {
+  currentHeroLogoIndex = (currentHeroLogoIndex + 1) % heroLogoVariants.length;
+  setHeroLogo(currentHeroLogoIndex);
+});
+
+heroLogoCycle?.addEventListener('keydown', (event) => {
+  if (!['Enter', ' '].includes(event.key)) {
+    return;
+  }
+
+  event.preventDefault();
+  heroLogoCycle.click();
+});
 
 function setMenuOpen(isOpen) {
   body.classList.toggle('menu-open', isOpen);
@@ -239,12 +346,68 @@ function setText(id, value) {
   }
 }
 
+const appIconPaths = {
+  medical: '<path d="M12 5v14M5 12h14"/>',
+  pin: '<path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/>',
+  calendar: '<rect x="5" y="6" width="14" height="13" rx="2"/><path d="M8 4v4M16 4v4M5 10h14"/>',
+  heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/>',
+  bolt: '<path d="M13 2 5 13h6l-1 9 8-12h-6l1-8Z"/>',
+  users: '<path d="M16 18a4 4 0 0 0-8 0"/><circle cx="12" cy="10" r="3"/><path d="M20 18a3.5 3.5 0 0 0-4-3.4M8 14.6A3.5 3.5 0 0 0 4 18"/><circle cx="18" cy="10" r="2"/><circle cx="6" cy="10" r="2"/>',
+  file: '<path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v5h5M9.5 13h5M9.5 17h5"/>',
+  target: '<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>',
+  gift: '<rect x="5" y="9" width="14" height="11" rx="2"/><path d="M12 9v11M5 13h14M8 9a2.2 2.2 0 1 1 4 0M16 9a2.2 2.2 0 1 0-4 0"/>'
+};
+
+function createAppIcon(iconName) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.innerHTML = appIconPaths[iconName] || appIconPaths.target;
+  return svg;
+}
+
+function renderAppTool(content, index = 0) {
+  const tool = content.tools?.[index];
+  const panel = document.getElementById('appToolPanel');
+  const bullets = document.getElementById('appToolBullets');
+
+  if (!tool || !panel || !bullets) {
+    return;
+  }
+
+  currentAppToolIndex = index;
+  panel.classList.remove('changing');
+  void panel.offsetWidth;
+  panel.classList.add('changing');
+
+  setText('appToolKicker', content.label);
+  setText('appToolTitle', tool.title);
+  setText('appToolText', tool.text);
+
+  bullets.replaceChildren(...tool.bullets.map((text) => {
+    const item = document.createElement('small');
+    item.textContent = text;
+    return item;
+  }));
+
+  document.querySelectorAll('#appQuickGrid button').forEach((button, buttonIndex) => {
+    button.classList.toggle('active', buttonIndex === index);
+  });
+}
+
+function setAppLoggedIn(isLoggedIn) {
+  const appScreen = document.querySelector('.app-screen');
+  appScreen?.classList.toggle('app-logged-in', isLoggedIn);
+}
+
 function renderAppMode(mode, moveFocus = false) {
   const content = appModes[mode];
   const appScreen = document.querySelector('.app-screen');
   const description = document.querySelector('.app-mode-description');
   const highlights = document.getElementById('appModeHighlights');
   const quickGrid = document.getElementById('appQuickGrid');
+  const bottomNav = document.querySelector('.app-bottom-nav');
+  const alertIcon = document.querySelector('.app-alert-icon');
 
   if (!content || !appScreen || !description || !highlights || !quickGrid) {
     return;
@@ -258,10 +421,16 @@ function renderAppMode(mode, moveFocus = false) {
     setText('appModeLabel', content.label);
     setText('appModeTitle', content.title);
     setText('appModeText', content.text);
+    setText('appLoginTitle', content.loginTitle);
+    setText('appLoginText', content.loginText);
+    setText('appEnterButton', content.loginButton);
     setText('appGreeting', content.greeting);
     setText('appHeadline', content.headline);
     setText('appAvatar', content.avatar);
-    setText('appSearchText', content.search);
+    setText('appHeroTitle', content.heroTitle);
+    setText('appHeroText', content.heroText);
+    setText('appHeroAction', content.heroAction);
+    setText('appHeroVisual', content.heroVisual);
     setText('appCardHeading', content.cardHeading);
     setText('appResultAvatar', content.resultAvatar);
     setText('appResultTitle', content.resultTitle);
@@ -276,16 +445,42 @@ function renderAppMode(mode, moveFocus = false) {
       return item;
     }));
 
-    quickGrid.replaceChildren(...content.quickActions.map(([icon, label]) => {
+    quickGrid.replaceChildren(...content.quickActions.map(([icon, label], index) => {
       const button = document.createElement('button');
       const iconElement = document.createElement('span');
       button.type = 'button';
-      iconElement.textContent = icon;
+      button.dataset.appTool = String(index);
+      iconElement.append(createAppIcon(icon));
       button.append(iconElement, label);
+      button.addEventListener('click', () => {
+        setAppLoggedIn(true);
+        renderAppTool(content, index);
+        window.clearInterval(appModeInterval);
+      });
       return button;
     }));
 
+    if (alertIcon) {
+      alertIcon.replaceChildren(createAppIcon(content.alertIcon));
+    }
+
+    if (bottomNav) {
+      bottomNav.style.gridTemplateColumns = `repeat(${content.navItems.length}, 1fr)`;
+    }
+
+    bottomNav?.replaceChildren(...content.navItems.map((label, index) => {
+      const item = document.createElement('span');
+      const small = document.createElement('small');
+      item.textContent = ['⌂', '◇', '☰', '●', '○'][index] || '○';
+      item.classList.toggle('active', index === 0);
+      small.textContent = label;
+      item.append(small);
+      return item;
+    }));
+
     appScreen.dataset.mode = mode;
+    setAppLoggedIn(false);
+    renderAppTool(content, 0);
     appPreview?.setAttribute('aria-labelledby', `tab-${mode}`);
 
     appModeTabs.forEach((tab) => {
@@ -306,16 +501,6 @@ function renderAppMode(mode, moveFocus = false) {
 
 function restartAppModeRotation() {
   window.clearInterval(appModeInterval);
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  appModeInterval = window.setInterval(() => {
-    const modes = Object.keys(appModes);
-    const nextIndex = (modes.indexOf(currentAppMode) + 1) % modes.length;
-    renderAppMode(modes[nextIndex]);
-  }, 7000);
 }
 
 appModeTabs.forEach((tab, index) => {
@@ -341,6 +526,10 @@ appPreview?.addEventListener('mouseenter', () => window.clearInterval(appModeInt
 appPreview?.addEventListener('mouseleave', restartAppModeRotation);
 appPreview?.addEventListener('focusin', () => window.clearInterval(appModeInterval));
 appPreview?.addEventListener('focusout', restartAppModeRotation);
+appEnterButton?.addEventListener('click', () => {
+  setAppLoggedIn(true);
+  window.clearInterval(appModeInterval);
+});
 
 if (appModeTabs.length) {
   renderAppMode(currentAppMode);

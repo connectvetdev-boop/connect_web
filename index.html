@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500;600;700&amp;family=Antonio:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=20260617" rel="stylesheet"/>
+<link href="css/style.css?v=20260617-visual17" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -42,7 +42,12 @@
     <div class="hero-text">
       <span>Conectando cuidado, profissionais e inovação</span>
 
-      <h1>O futuro do cuidado animal começa aqui.</h1>
+      <h1 class="sr-only">O futuro do cuidado animal começa aqui.</h1>
+
+      <button class="hero-brand-reveal" id="heroLogoCycle" type="button" aria-label="Alterar aparência da logo Connect Vet">
+        <span>Clique na logo</span>
+        <img alt="Connect Vet do Brasil" src="assets/svg/Mescla_1.svg" decoding="async">
+      </button>
 
       <p>
         O Connect Vet do Brasil é um ecossistema que integra tutores,
@@ -53,12 +58,6 @@
       <div class="hero-actions">
         <a href="#experiencia-app" class="hero-btn">Experimentar o app</a>
         <a href="#ecossistema" class="hero-link">Conheça o ecossistema <span aria-hidden="true">→</span></a>
-      </div>
-
-      <div class="hero-proof" aria-label="Destaques do ecossistema">
-        <div><strong>3</strong><span>frentes conectadas</span></div>
-        <div><strong>1</strong><span>jornada integrada</span></div>
-        <div><strong>Brasil</strong><span>visão nacional</span></div>
       </div>
     </div>
   </div>
@@ -151,37 +150,37 @@
           <path d="M380 310 C465 390 520 465 612 510"/>
         </svg>
 
-        <button aria-pressed="true" class="ecosystem-node node-tutor active" data-ecosystem-node="tutor" style="--node-x: 14%; --node-y: 14%;" type="button">
+        <button aria-pressed="true" class="ecosystem-node node-tutor active" data-ecosystem-node="tutor" style="--node-x: 17%; --node-y: 14%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">♥</span>
           <strong>Tutores</strong>
           <small>Cuidado simplificado</small>
         </button>
 
-        <button aria-pressed="false" class="ecosystem-node node-professional" data-ecosystem-node="profissional" style="--node-x: 68%; --node-y: 14%;" type="button">
+        <button aria-pressed="false" class="ecosystem-node node-professional" data-ecosystem-node="profissional" style="--node-x: 63%; --node-y: 14%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">+</span>
           <strong>Profissionais</strong>
           <small>Trabalho valorizado</small>
         </button>
 
-        <button aria-pressed="false" class="ecosystem-node node-business" data-ecosystem-node="negocios" style="--node-x: 2%; --node-y: 43%;" type="button">
+        <button aria-pressed="false" class="ecosystem-node node-business" data-ecosystem-node="negocios" style="--node-x: 7%; --node-y: 43%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">▦</span>
           <strong>Negócios</strong>
           <small>Serviços e produtos</small>
         </button>
 
-        <button aria-pressed="false" class="ecosystem-node node-social" data-ecosystem-node="solidario" style="--node-x: 77%; --node-y: 43%;" type="button">
+        <button aria-pressed="false" class="ecosystem-node node-social" data-ecosystem-node="solidario" style="--node-x: 66%; --node-y: 43%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">◎</span>
           <strong>Solidário</strong>
           <small>Impacto que conecta</small>
         </button>
 
-        <button aria-pressed="false" class="ecosystem-node node-partners" data-ecosystem-node="parceiros" style="--node-x: 14%; --node-y: 73%;" type="button">
+        <button aria-pressed="false" class="ecosystem-node node-partners" data-ecosystem-node="parceiros" style="--node-x: 17%; --node-y: 73%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">◇</span>
           <strong>Parceiros</strong>
           <small>Rede estratégica</small>
         </button>
 
-        <button aria-pressed="false" class="ecosystem-node node-data" data-ecosystem-node="inteligencia" style="--node-x: 68%; --node-y: 73%;" type="button">
+        <button aria-pressed="false" class="ecosystem-node node-data" data-ecosystem-node="inteligencia" style="--node-x: 63%; --node-y: 73%;" type="button">
           <span class="ecosystem-node-icon" aria-hidden="true">⌁</span>
           <strong>Inteligência</strong>
           <small>Dados e eficiência</small>
@@ -239,22 +238,18 @@
       <span class="eyebrow">Experimente o futuro</span>
       <h2>Um gostinho do app antes mesmo do lançamento.</h2>
       <p>
-        Explore algumas jornadas planejadas para o Connect Vet. Alterne entre os perfis
-        e veja como tutores, profissionais e iniciativas sociais poderão se conectar.
+        Explore as duas experiências principais do Connect Vet. O módulo Solidário
+        entrará dentro dos apps Easy e Professional, integrando impacto social à jornada.
       </p>
 
       <div class="app-mode-tabs" aria-label="Escolha uma experiência" role="tablist">
-        <button aria-controls="app-preview" aria-selected="true" class="app-mode-tab active" data-app-mode="tutor" id="tab-tutor" role="tab" type="button">
+        <button aria-controls="app-preview" aria-selected="true" class="app-mode-tab active" data-app-mode="easy" id="tab-easy" role="tab" type="button">
           <span class="mode-icon" aria-hidden="true">♥</span>
-          Tutor
+          Connect Easy
         </button>
         <button aria-controls="app-preview" aria-selected="false" class="app-mode-tab" data-app-mode="profissional" id="tab-profissional" role="tab" type="button">
           <span class="mode-icon" aria-hidden="true">+</span>
-          Profissional
-        </button>
-        <button aria-controls="app-preview" aria-selected="false" class="app-mode-tab" data-app-mode="solidario" id="tab-solidario" role="tab" type="button">
-          <span class="mode-icon" aria-hidden="true">◎</span>
-          Solidário
+          Connect Professional
         </button>
       </div>
 
@@ -271,51 +266,72 @@
       </div>
     </div>
 
-    <div class="app-preview-stage reveal" id="app-preview" role="tabpanel" aria-labelledby="tab-tutor">
+    <div class="app-preview-stage reveal" id="app-preview" role="tabpanel" aria-labelledby="tab-easy">
       <div class="app-orbit orbit-one" aria-hidden="true"></div>
       <div class="app-orbit orbit-two" aria-hidden="true"></div>
 
       <div class="app-phone">
         <div class="app-phone-frame">
           <div class="app-phone-speaker" aria-hidden="true"></div>
-          <div class="app-screen">
+          <div class="app-screen" data-mode="easy">
             <div class="app-status">
               <span>9:41</span>
               <span aria-hidden="true">● ◔ ▰</span>
             </div>
 
-            <div class="app-screen-header">
-              <div>
-                <small id="appGreeting">Olá, Marcia!</small>
-                <strong id="appHeadline">Como podemos cuidar hoje?</strong>
-              </div>
-              <div class="app-avatar" id="appAvatar" aria-hidden="true">M</div>
+            <div class="app-login-screen" id="appLoginScreen" aria-live="polite">
+              <img alt="" src="assets/svg/P_B.svg" decoding="async">
+              <strong id="appLoginTitle">Connect Easy</strong>
+              <p id="appLoginText">Acesse sua jornada de cuidado animal.</p>
+              <button id="appEnterButton" type="button">Entrar</button>
             </div>
 
-            <div class="app-search">
-              <span aria-hidden="true">⌕</span>
-              <span id="appSearchText">Buscar veterinários e serviços</span>
+            <div class="app-screen-header">
+              <div>
+                <small id="appGreeting">Olá, Amanda!</small>
+                <strong id="appHeadline">Como podemos cuidar hoje?</strong>
+              </div>
+              <div class="app-avatar" id="appAvatar" aria-hidden="true">A</div>
+            </div>
+
+            <div class="app-hero-card">
+              <div>
+                <strong id="appHeroTitle">Precisando de ajuda?</strong>
+                <span id="appHeroText">Encontre os melhores profissionais perto de você.</span>
+                <button id="appHeroAction" type="button">Buscar agora</button>
+              </div>
+              <div class="app-hero-visual" id="appHeroVisual" aria-hidden="true">Rex</div>
             </div>
 
             <div class="app-quick-grid" id="appQuickGrid">
-              <button type="button"><span>✚</span>Veterinário</button>
-              <button type="button"><span>⌖</span>Próximos</button>
-              <button type="button"><span>▣</span>Agenda</button>
-              <button type="button"><span>♡</span>Cuidados</button>
+              <button type="button"><span></span>Meus Animais</button>
+              <button type="button"><span></span>Profissionais</button>
+              <button type="button"><span></span>Receitas</button>
+              <button type="button"><span></span>Agenda</button>
+            </div>
+
+            <div class="app-tool-panel" id="appToolPanel" aria-live="polite">
+              <span id="appToolKicker">Ferramenta</span>
+              <strong id="appToolTitle">Cadastro de pet</strong>
+              <p id="appToolText">Crie perfis completos para cada animal e mantenha dados importantes sempre por perto.</p>
+              <div id="appToolBullets">
+                <small>Dados do animal</small>
+                <small>Historico de cuidados</small>
+              </div>
             </div>
 
             <div class="app-screen-section">
               <div class="app-section-heading">
-                <strong id="appCardHeading">Profissionais perto de você</strong>
+                <strong id="appCardHeading">Próximos compromissos</strong>
                 <span>Ver todos</span>
               </div>
 
               <div class="app-result-card">
-                <div class="app-result-avatar" id="appResultAvatar">CV</div>
+                <div class="app-result-avatar" id="appResultAvatar">R</div>
                 <div>
-                  <strong id="appResultTitle">Clínica Vet Center</strong>
-                  <span id="appResultMeta">1,2 km • Aberto agora</span>
-                  <small id="appResultBadge">★ 4,9 atendimento</small>
+                  <strong id="appResultTitle">Consulta do Rex</strong>
+                  <span id="appResultMeta">Hoje, 15:30 • Dr. Lucas Ferreira</span>
+                  <small id="appResultBadge">Confirmado</small>
                 </div>
                 <button aria-label="Abrir resultado" type="button">›</button>
               </div>
@@ -324,15 +340,15 @@
             <div class="app-alert-card" id="appAlertCard">
               <span class="app-alert-icon" aria-hidden="true">♡</span>
               <div>
-                <strong id="appAlertTitle">Próximo cuidado</strong>
-                <small id="appAlertText">Vacina da Mel em 4 dias</small>
+                <strong id="appAlertTitle">Carteira de vacinação</strong>
+                <small id="appAlertText">Ver carteirinha completa</small>
               </div>
             </div>
 
             <div class="app-bottom-nav" aria-hidden="true">
               <span class="active">⌂<small>Início</small></span>
-              <span>⌕<small>Buscar</small></span>
-              <span>♡<small>Pets</small></span>
+              <span>◇<small>Serviços</small></span>
+              <span>☰<small>Mensagens</small></span>
               <span>○<small>Perfil</small></span>
             </div>
           </div>
@@ -810,19 +826,19 @@
       <p>Conectando cuidado, profissionais, inovação e impacto social em um único ecossistema.</p>
       <div class="footer-socials" aria-label="Redes sociais">
         <a aria-label="Instagram do Connect Vet" href="https://www.instagram.com/connectvetdobrasil/" rel="noopener noreferrer" target="_blank">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <svg aria-hidden="true" class="brand-icon" viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.25A4.75 4.75 0 1 1 12 16.75 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 12 14.75 2.75 2.75 0 0 0 12 9.25Zm5.15-2.45a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/></svg>
           <span>Instagram</span>
         </a>
         <a aria-label="TikTok do Connect Vet" href="https://www.tiktok.com/@connectvetdobrasil" rel="noopener noreferrer" target="_blank">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 4v10.2a4.6 4.6 0 1 1-3.4-4.45"/><path d="M14 4c.7 2.4 2.25 3.85 5 4"/></svg>
+          <svg aria-hidden="true" class="brand-icon" viewBox="0 0 24 24"><path d="M15.7 2c.35 2.66 1.85 4.25 4.3 4.42v3.08a7.84 7.84 0 0 1-4.25-1.24v6.5A6.03 6.03 0 1 1 9.72 8.8c.43 0 .85.04 1.26.13v3.28a2.86 2.86 0 1 0 1.92 2.7V2h2.8Z"/></svg>
           <span>TikTok</span>
         </a>
         <a aria-label="WhatsApp do Connect Vet" href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8.5c.5 2 2 3.5 4 4l1.2-1.1c.3-.2.6-.2.9 0l1.4.7"/></svg>
+          <svg aria-hidden="true" class="brand-icon" viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.45 14.95L2.25 22l5.18-1.31A9.93 9.93 0 1 0 12.04 2Zm0 2a7.9 7.9 0 0 1 0 15.8 7.8 7.8 0 0 1-3.97-1.08l-.38-.22-2.45.62.64-2.35-.25-.4A7.9 7.9 0 0 1 12.04 4Zm-3.2 3.9c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.26s.98 2.62 1.12 2.8c.14.18 1.9 3.03 4.73 4.13 2.35.92 2.83.74 3.34.69.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33l-1.56-.77c-.28-.14-.48-.21-.68.07-.2.28-.78.91-.95 1.1-.17.18-.35.2-.64.07-.29-.14-1.22-.45-2.32-1.44-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.35.43-.52.14-.18.19-.29.29-.49.1-.2.05-.37-.02-.52l-.71-1.7c-.19-.46-.38-.45-.54-.46h-.47Z"/></svg>
           <span>WhatsApp</span>
         </a>
         <a aria-label="Facebook do Connect Vet" href="https://www.facebook.com/connectvetdobrasil" rel="noopener noreferrer" target="_blank">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-3H14V8.2c0-.9.3-1.7 1.8-1.7H18V3.8c-.4-.1-1.5-.2-2.7-.2-2.7 0-4.3 1.6-4.3 4.5V10H8v3h3v8"/></svg>
+          <svg aria-hidden="true" class="brand-icon" viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06Z"/></svg>
           <span>Facebook</span>
         </a>
       </div>
@@ -858,8 +874,8 @@
   </div>
 </footer>
 <a aria-label="Conversar pelo WhatsApp" class="whatsapp-float" href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">
-  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8.5c.5 2 2 3.5 4 4l1.2-1.1c.3-.2.6-.2.9 0l1.4.7"/></svg>
+  <svg aria-hidden="true" class="brand-icon" viewBox="0 0 24 24"><path d="M12.04 2a9.86 9.86 0 0 0-8.45 14.95L2.25 22l5.18-1.31A9.93 9.93 0 1 0 12.04 2Zm0 2a7.9 7.9 0 0 1 0 15.8 7.8 7.8 0 0 1-3.97-1.08l-.38-.22-2.45.62.64-2.35-.25-.4A7.9 7.9 0 0 1 12.04 4Zm-3.2 3.9c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.26s.98 2.62 1.12 2.8c.14.18 1.9 3.03 4.73 4.13 2.35.92 2.83.74 3.34.69.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33l-1.56-.77c-.28-.14-.48-.21-.68.07-.2.28-.78.91-.95 1.1-.17.18-.35.2-.64.07-.29-.14-1.22-.45-2.32-1.44-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.35.43-.52.14-.18.19-.29.29-.49.1-.2.05-.37-.02-.52l-.71-1.7c-.19-.46-.38-.45-.54-.46h-.47Z"/></svg>
 </a>
-<script src="js/script.js?v=20260617"></script>
+<script src="js/script.js?v=20260617-visual17"></script>
 </body>
 </html>
