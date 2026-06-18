@@ -199,11 +199,6 @@ const heroLogoVariants = [
 
 let currentHeroLogoIndex = 0;
 
-heroLogoVariants.forEach(({ src }) => {
-  const image = new Image();
-  image.src = src;
-});
-
 function setHeroLogo(index) {
   const logo = heroLogoCycle?.querySelector('img');
   if (!heroLogoCycle || !logo) {
