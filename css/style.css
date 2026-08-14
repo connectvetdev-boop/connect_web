@@ -2369,6 +2369,14 @@
   max-width: 680px;
 }
 
+.contato-texto h1 {
+  color: #0E5C0B;
+  max-width: 680px;
+  font-size: clamp(48px, 6vw, 86px);
+  line-height: .96;
+  margin-bottom: 20px;
+}
+
 .contato-texto p {
   max-width: 620px;
 }
@@ -2447,6 +2455,62 @@
   margin-top: 8px;
 }
 
+.contato-page-hero {
+  padding-top: calc(var(--header-height) + 78px);
+}
+
+.contato-assuntos {
+  background:
+    radial-gradient(circle at 84% 16%, rgba(126,217,87,.14), transparent 32%),
+    #031b0e;
+}
+
+.contato-assuntos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.contato-assunto-card {
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.contato-assunto-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(126,217,87,.38);
+  background: rgba(126,217,87,.105);
+}
+
+.contato-assunto-card span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.contato-assunto-card h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font: 800 31px/1 "Advent Pro", sans-serif;
+}
+
+.contato-assunto-card p {
+  color: rgba(255,255,255,.74);
+  font-size: 17px;
+  line-height: 1.48;
+}
+
 @media(max-width: 980px) {
   .contato-grid {
     grid-template-columns: 1fr;
@@ -2467,6 +2531,10 @@
 
   .contato-form-premium .btn {
     width: 100%;
+  }
+
+  .contato-assuntos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 /* ===========================
@@ -2506,6 +2574,13 @@
 .parcerias-texto h2 {
   color: #FFFFFF;
   font-size: clamp(48px, 6vw, 82px);
+}
+
+.parcerias-texto h1 {
+  color: #FFFFFF;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: .96;
+  margin-bottom: 20px;
 }
 
 .parcerias-texto p {
@@ -2548,6 +2623,23 @@
   object-fit: contain;
 }
 
+.parceiro-logo-box-dark {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+    rgba(0,0,0,.22);
+}
+
+.parceiro-logo-box-dark img {
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.22));
+}
+
+.parceiro-tecnologia {
+  background:
+    linear-gradient(145deg, rgba(126,217,87,.11), rgba(255,255,255,.045)),
+    rgba(255,255,255,.065);
+}
+
 .parceiro-conteudo span {
   display: inline-flex;
   padding: 9px 16px;
@@ -2560,6 +2652,12 @@
 }
 
 .parceiro-conteudo h3 {
+  color: #FFFFFF;
+  font-size: clamp(46px, 5vw, 70px);
+  margin-bottom: 8px;
+}
+
+.parceiro-conteudo h2 {
   color: #FFFFFF;
   font-size: clamp(46px, 5vw, 70px);
   margin-bottom: 8px;
@@ -2593,6 +2691,13 @@
   margin-bottom: 0;
 }
 
+.parcerias-convite h2 {
+  color: #0E5C0B;
+  font-size: 38px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
 .parcerias-convite p {
   color: #4B5563;
   font-size: 18px;
@@ -2612,6 +2717,62 @@
   box-shadow: 0 0 0 6px rgba(0,168,89,.20);
 }
 
+.parceiros-page-hero {
+  padding-top: calc(var(--header-height) + 78px);
+}
+
+.parceiros-tipos {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(126,217,87,.15), transparent 32%),
+    #031b0e;
+}
+
+.parceiros-tipos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.parceiro-tipo-card {
+  min-height: 245px;
+  padding: 26px;
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.parceiro-tipo-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(126,217,87,.38);
+  background: rgba(126,217,87,.105);
+}
+
+.parceiro-tipo-card span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.parceiro-tipo-card h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font: 800 31px/1 "Advent Pro", sans-serif;
+}
+
+.parceiro-tipo-card p {
+  color: rgba(255,255,255,.74);
+  font-size: 17px;
+  line-height: 1.48;
+}
+
 @media(max-width: 980px) {
   .parceiro-destaque,
   .parcerias-convite {
@@ -2625,6 +2786,10 @@
 
   .parcerias-convite .btn {
     width: 100%;
+  }
+
+  .parceiros-tipos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 /* ===========================
@@ -4560,6 +4725,29 @@ body {
   filter: drop-shadow(0 8px 18px rgba(0,0,0,.25));
 }
 
+.footer-brand-visual {
+  width: 136px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 35% 28%, rgba(126,217,87,.26), transparent 42%),
+    linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.035));
+  border: 1px solid rgba(126,217,87,.16);
+  box-shadow: 0 18px 42px rgba(0,0,0,.18);
+}
+
+.footer-brand-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.04);
+}
+
 .footer-brand > p {
   max-width: 360px;
   color: rgba(255,255,255,.62);
@@ -4679,6 +4867,61 @@ body {
 .footer-bottom p {
   color: rgba(255,255,255,.44);
   font-size: 14px;
+}
+
+.footer-legal {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-connect-signature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-connect-signature img {
+  display: block;
+  width: 62px;
+  height: auto;
+  flex: 0 0 auto;
+  opacity: .74;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.24));
+}
+
+.footer-founders {
+  color: rgba(255,255,255,.5) !important;
+  font-size: 13px !important;
+  line-height: 1.45;
+}
+
+.footer-tech-partner {
+  display: grid;
+  justify-items: end;
+  gap: 7px;
+  margin-left: auto;
+}
+
+.footer-tech-partner span {
+  color: rgba(255,255,255,.46);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.footer-tech-partner img {
+  display: block;
+  width: min(190px, 32vw);
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  opacity: .78;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.28));
+}
+
+.footer-platform {
+  white-space: nowrap;
 }
 
 .footer-bottom strong {
@@ -4959,7 +5202,67 @@ body {
 
   .footer-bottom {
     display: grid;
+    justify-items: center;
     text-align: center;
+  }
+
+  .footer-connect-signature {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .footer-connect-signature img {
+    width: 72px;
+  }
+
+  .footer-tech-partner {
+    justify-items: center;
+    margin-left: 0;
+  }
+
+  .footer-tech-partner img {
+    width: min(178px, 70vw);
+  }
+
+  .footer-platform {
+    white-space: normal;
+  }
+
+  .parceiros-page-hero {
+    padding-top: calc(var(--header-height) + 42px);
+  }
+
+  .parcerias-texto h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .parcerias-convite h2 {
+    font-size: 32px;
+  }
+
+  .parceiros-tipos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parceiro-tipo-card {
+    min-height: auto;
+  }
+
+  .contato-page-hero {
+    padding-top: calc(var(--header-height) + 42px);
+  }
+
+  .contato-texto h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .contato-assuntos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-assunto-card {
+    min-height: auto;
   }
 
   .whatsapp-float {
@@ -5867,12 +6170,16 @@ body {
 .solidario-centro h2,
 .desenvolvimento-texto h2,
 .parcerias-texto h2,
+.parcerias-texto h1,
 .contato-texto h2,
+.contato-texto h1,
 .profissional-card-texto h3,
 .connect-easy-card-texto h3,
 .solidario-ong-texto h3,
 .parceiro-conteudo h3,
+.parceiro-conteudo h2,
 .parcerias-convite h3,
+.parcerias-convite h2,
 .roadmap-card h3,
 .ecosystem-detail h3 {
   color: #fff;
@@ -6414,7 +6721,7 @@ textarea {
 }
 
 .brand {
-  min-width: 104px;
+  min-width: 140px;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -6423,8 +6730,8 @@ textarea {
 }
 
 .logo-header {
-  width: 98px;
-  height: 98px;
+  width: 132px;
+  height: 104px;
   object-fit: contain;
   object-position: center;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .34));
@@ -6610,12 +6917,12 @@ textarea {
 
 @media (max-width: 1080px) {
   .brand {
-    min-width: 86px;
+    min-width: 112px;
   }
 
   .logo-header {
-    width: 82px;
-    height: 82px;
+    width: 108px;
+    height: 88px;
   }
 
   .hero-container {
@@ -6631,13 +6938,13 @@ textarea {
 
 @media (max-width: 760px) {
   .brand {
-    min-width: 64px;
+    min-width: 92px;
     padding: 0;
   }
 
   .logo-header {
-    width: 64px;
-    height: 64px;
+    width: 88px;
+    height: 70px;
   }
 
   .hero-container {
@@ -7130,4 +7437,1726 @@ textarea {
 
 #connect-easy .connect-easy-modulo:hover {
   background: rgba(255, 255, 255, .12);
+}
+
+/* Ajuste final da marca no cabecalho */
+.header .brand {
+  min-width: 140px;
+}
+
+.header .logo-header {
+  width: 132px;
+  height: 104px;
+}
+
+@media (max-width: 1080px) {
+  .header .brand {
+    min-width: 112px;
+  }
+
+  .header .logo-header {
+    width: 108px;
+    height: 88px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header .brand {
+    min-width: 92px;
+  }
+
+  .header .logo-header {
+    width: 88px;
+    height: 70px;
+  }
+}
+
+/* Submenu do menu principal */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #062a17;
+  min-width: 190px;
+  padding: 8px 0;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 14px;
+  white-space: nowrap;
+}
+
+
+/* SOBRE - HERO AJUSTADO AO PADRÃO DO SITE */
+
+.about-hero {
+  min-height: calc(100vh - 88px);
+  padding: 140px 0 110px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(3, 32, 17, .96), rgba(14, 62, 36, .88)),
+    url("../assets/img/backend_horses.svg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.about-hero-content {
+  max-width: 900px;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin: 28px 0;
+  color: #fff;
+}
+
+.about-hero p {
+  max-width: 720px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+}
+
+/* SOBRE NOS - PAGINA INSTITUCIONAL */
+
+.page-sobre {
+  background: #031b0e;
+  color: #fff;
+}
+
+.page-sobre .header,
+.page-interna .header {
+  background: rgba(0, 28, 13, .78);
+}
+
+.page-sobre .menu a[href="sobre.html"].active {
+  color: #06210f;
+  background: #7ed957;
+}
+
+.sobre-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  padding: calc(var(--header-height) + 62px) 0 72px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 78% 28%, rgba(126, 217, 87, .18), transparent 34%),
+    radial-gradient(circle at 8% 20%, rgba(0, 168, 89, .2), transparent 32%),
+    linear-gradient(135deg, #02150a 0%, #06331a 48%, #0c4623 100%);
+}
+
+.sobre-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, .58fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 72px);
+}
+
+.sobre-hero-copy h1 {
+  max-width: 820px;
+  margin: 22px 0 24px;
+  color: #fff;
+  font: 800 clamp(44px, 5.35vw, 76px)/.95 "Advent Pro", sans-serif;
+  letter-spacing: 0;
+}
+
+.sobre-hero-copy p,
+.sobre-copy p,
+.sobre-heading p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, .82);
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.58;
+}
+
+.sobre-hero-visual {
+  display: grid;
+  justify-items: center;
+  gap: 22px;
+}
+
+.sobre-orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+}
+
+.sobre-orbit::before,
+.sobre-orbit::after,
+.sobre-orbit span {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(126, 217, 87, .24);
+  border-radius: 50%;
+}
+
+.sobre-orbit::before {
+  inset: 5%;
+}
+
+.sobre-orbit::after {
+  inset: 18%;
+  border-style: dashed;
+  animation: sobreSpin 28s linear infinite;
+}
+
+.sobre-orbit span:nth-child(1) {
+  width: 18px;
+  height: 18px;
+  top: 15%;
+  right: 27%;
+  background: #7ed957;
+  box-shadow: 0 0 28px rgba(126, 217, 87, .72);
+}
+
+.sobre-orbit span:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  left: 9%;
+  bottom: 34%;
+  background: rgba(255, 255, 255, .9);
+}
+
+.sobre-orbit span:nth-child(3) {
+  width: 13px;
+  height: 13px;
+  right: 12%;
+  bottom: 20%;
+  background: #00a859;
+}
+
+.sobre-orbit img {
+  width: min(72%, 310px);
+  filter: drop-shadow(0 28px 60px rgba(0, 0, 0, .42));
+}
+
+.sobre-hero-visual small {
+  max-width: 300px;
+  color: rgba(255, 255, 255, .68);
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.sobre-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(86px, 11vw, 148px) 0;
+  background: #031b0e;
+}
+
+.sobre-section:nth-of-type(even) {
+  background:
+    radial-gradient(circle at 85% 18%, rgba(0, 168, 89, .14), transparent 32%),
+    #052412;
+}
+
+.sobre-split,
+.sobre-tech-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(340px, .78fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 82px);
+}
+
+.sobre-copy h2,
+.sobre-heading h2,
+.sobre-futuro h2,
+.sobre-final h2 {
+  max-width: 850px;
+  margin: 14px 0 22px;
+  color: #fff;
+  font: 800 clamp(42px, 5.6vw, 78px)/.96 "Advent Pro", sans-serif;
+  letter-spacing: 0;
+}
+
+.sobre-copy p + p {
+  margin-top: 18px;
+}
+
+.sobre-human-panel {
+  position: relative;
+  min-height: 440px;
+  padding: clamp(28px, 4vw, 42px);
+  border: 1px solid rgba(126, 217, 87, .2);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.09), rgba(0,168,89,.11)),
+    rgba(255,255,255,.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .26);
+}
+
+.sobre-human-panel strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  font: 800 clamp(32px, 4vw, 54px)/.95 "Advent Pro", sans-serif;
+}
+
+.sobre-human-panel span {
+  color: rgba(255, 255, 255, .76);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.sobre-thread {
+  position: absolute;
+  inset: auto 28px 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sobre-thread span {
+  min-height: 62px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(126, 217, 87, .2);
+  border-radius: 16px;
+  color: #06210f;
+  background: rgba(126, 217, 87, .92);
+  font-weight: 800;
+}
+
+.sobre-heading {
+  max-width: 820px;
+  margin-bottom: 36px;
+}
+
+.sobre-origem {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(126,217,87,.16), transparent 34%),
+    radial-gradient(circle at 88% 28%, rgba(255,255,255,.08), transparent 30%),
+    #042211;
+}
+
+.page-sobre main > .sobre-origem:first-child {
+  padding-top: calc(var(--header-height) + 72px);
+}
+
+.sobre-origin-intro {
+  max-width: 1180px;
+  margin-bottom: 34px;
+}
+
+.sobre-origin-intro h2 {
+  max-width: none;
+  margin: 14px 0 18px;
+  color: #fff;
+  font: 800 clamp(34px, 4.35vw, 58px)/.95 "Advent Pro", sans-serif;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.sobre-origin-intro p {
+  max-width: 820px;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.58;
+}
+
+.sobre-origin-composition {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "start people"
+    "evolution evolution";
+  gap: clamp(22px, 4vw, 48px);
+  padding: clamp(28px, 5vw, 54px);
+  margin-bottom: 42px;
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(126,217,87,.14), transparent 28%),
+    radial-gradient(circle at 88% 72%, rgba(255,255,255,.08), transparent 28%),
+    rgba(255,255,255,.045);
+  box-shadow: 0 30px 80px rgba(0,0,0,.18);
+}
+
+.sobre-origin-composition::before {
+  content: "";
+  position: absolute;
+  inset: calc(50% + 18px) 9% auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(126,217,87,.42), transparent);
+}
+
+.sobre-origin-text-block {
+  position: relative;
+  z-index: 2;
+  max-width: 510px;
+}
+
+.origin-start {
+  grid-area: start;
+  align-self: start;
+}
+
+.origin-evolution {
+  grid-area: evolution;
+  justify-self: stretch;
+  align-self: end;
+  max-width: none;
+  columns: 2 320px;
+  column-gap: clamp(28px, 5vw, 72px);
+}
+
+.sobre-origin-text-block p {
+  color: rgba(255,255,255,.78);
+  font: 600 clamp(18px, 1.35vw, 21px)/1.58 "Advent Pro", sans-serif;
+  letter-spacing: .01em;
+}
+
+.sobre-origin-text-block p + p {
+  margin-top: 18px;
+}
+
+.origin-evolution p {
+  break-inside: avoid;
+}
+
+.sobre-origin-text-block strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.sobre-origin-people {
+  grid-area: people;
+  display: grid;
+  gap: 22px;
+  align-self: start;
+}
+
+.sobre-person {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  transition: transform .25s ease;
+}
+
+.sobre-person:hover {
+  transform: translateY(-4px);
+}
+
+.sobre-person-ana {
+  grid-template-columns: minmax(0, 1fr) 112px;
+  margin-left: clamp(20px, 7vw, 86px);
+}
+
+.sobre-person strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font: 800 27px/1 "Advent Pro", sans-serif;
+}
+
+.sobre-person p {
+  color: rgba(255,255,255,.72);
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+.sobre-person-figure {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  aspect-ratio: 1;
+  border: 1px dashed rgba(126,217,87,.42);
+  border-radius: 34% 66% 58% 42% / 46% 36% 64% 54%;
+  background:
+    linear-gradient(145deg, rgba(126,217,87,.22), rgba(255,255,255,.06)),
+    rgba(255,255,255,.045);
+}
+
+.sobre-person-figure span {
+  max-width: 72px;
+  color: rgba(255,255,255,.54);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sobre-origin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .34fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 34px;
+}
+
+.sobre-origin-story {
+  display: grid;
+  gap: 18px;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 95% 8%, rgba(126,217,87,.18), transparent 28%),
+    rgba(255,255,255,.06);
+  box-shadow: 0 20px 56px rgba(0,0,0,.18);
+}
+
+.sobre-origin-story p {
+  color: rgba(255,255,255,.78);
+  font: 600 clamp(18px, 1.35vw, 21px)/1.58 "Advent Pro", sans-serif;
+  letter-spacing: .01em;
+}
+
+.sobre-origin-story .sobre-origin-lead {
+  max-width: 880px;
+  color: #fff;
+  font: 800 clamp(28px, 3.3vw, 46px)/1.02 "Advent Pro", sans-serif;
+}
+
+.sobre-origin-story strong {
+  color: #fff;
+}
+
+.sobre-origin-panel {
+  display: grid;
+  align-content: space-between;
+  gap: 28px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(126,217,87,.16), rgba(255,255,255,.06)),
+    rgba(255,255,255,.055);
+  box-shadow: 0 20px 56px rgba(0,0,0,.18);
+}
+
+.sobre-origin-panel p {
+  color: rgba(255,255,255,.74);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.sobre-origin-founder-note {
+  display: grid;
+  gap: 10px;
+}
+
+.sobre-origin-founder-note span {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #06210f;
+  background: #7ed957;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sobre-origin-founder-note strong {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,.11);
+  color: #fff;
+  font: 800 25px/1 "Advent Pro", sans-serif;
+}
+
+.sobre-origin-founder-note strong::after {
+  content: "Fundadora";
+  align-self: center;
+  color: rgba(255,255,255,.58);
+  font: 700 13px/1 "Antonio", sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sobre-origin-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px 28px;
+  padding: 30px 0 4px;
+}
+
+.sobre-origin-timeline::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 7%;
+  right: 7%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(126,217,87,.82), transparent);
+}
+
+.sobre-origin-timeline article {
+  position: relative;
+  min-height: 118px;
+  padding: 22px 8px 0 0;
+  border: 0;
+  background: transparent;
+  transition: transform .25s ease;
+}
+
+.sobre-origin-timeline article::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #042211;
+  border-radius: 50%;
+  background: #7ed957;
+  box-shadow: 0 0 24px rgba(126,217,87,.62);
+}
+
+.sobre-origin-timeline article:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-origin-timeline span {
+  display: block;
+  margin-bottom: 9px;
+  color: #7ed957;
+  font: 800 13px/1 "Antonio", sans-serif;
+  letter-spacing: .12em;
+}
+
+.sobre-origin-timeline strong {
+  display: block;
+  max-width: 210px;
+  color: rgba(255,255,255,.9);
+  font: 700 22px/1.06 "Advent Pro", sans-serif;
+}
+
+.sobre-origin-timeline strong::first-letter {
+  color: #fff;
+}
+
+.sobre-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 42px;
+}
+
+.sobre-problem-card {
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 20px;
+  color: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.055);
+  font-size: 17px;
+  line-height: 1.38;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.sobre-problem-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(126,217,87,.34);
+  background: rgba(126,217,87,.105);
+}
+
+.sobre-connect-map {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(126, 217, 87, .2);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at center, rgba(126,217,87,.18), transparent 42%),
+    rgba(255,255,255,.045);
+}
+
+.sobre-connect-map::before {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border: 1px dashed rgba(126, 217, 87, .28);
+  border-radius: 999px;
+}
+
+.sobre-map-node,
+.sobre-map-center {
+  position: relative;
+  z-index: 2;
+  min-height: 96px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.sobre-map-node {
+  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(3, 31, 15, .72);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.sobre-map-center {
+  padding: 20px;
+  color: #06210f;
+  background: linear-gradient(145deg, #9cf279, #67ca47);
+  box-shadow: 0 22px 54px rgba(126, 217, 87, .24);
+}
+
+.sobre-map-center img {
+  width: 104px;
+  margin-bottom: 10px;
+  filter: brightness(0);
+}
+
+.sobre-map-center strong,
+.sobre-map-center span {
+  display: block;
+}
+
+.sobre-map-center strong {
+  font-size: 27px;
+}
+
+.sobre-map-center span {
+  font-size: 15px;
+  opacity: .78;
+}
+
+.sobre-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sobre-pillar-card {
+  min-height: 310px;
+  padding: clamp(26px, 3vw, 36px);
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.sobre-pillar-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(126,217,87,.34);
+  background: rgba(255,255,255,.09);
+}
+
+.sobre-pillar-card > span {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 30px;
+  border-radius: 18px;
+  color: #06210f;
+  background: #7ed957;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.sobre-pillar-card h3 {
+  margin-bottom: 14px;
+  color: #fff;
+  font: 800 34px/1 "Advent Pro", sans-serif;
+}
+
+.sobre-pillar-card p {
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.sobre-tech-grid {
+  grid-template-columns: minmax(320px, .72fr) minmax(0, .95fr);
+}
+
+.sobre-tech-mark {
+  position: relative;
+  min-height: 470px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(126,217,87,.18), rgba(255,255,255,.04)),
+    rgba(255,255,255,.045);
+  border: 1px solid rgba(126,217,87,.2);
+}
+
+.sobre-tech-mark::before,
+.sobre-tech-mark::after,
+.sobre-tech-mark span {
+  content: "";
+  position: absolute;
+  border: 2px solid rgba(126,217,87,.55);
+}
+
+.sobre-tech-mark::before {
+  width: 58%;
+  aspect-ratio: 1;
+  top: 19%;
+  left: 21%;
+  transform: rotate(45deg);
+}
+
+.sobre-tech-mark::after {
+  width: 36%;
+  aspect-ratio: 1;
+  top: 30%;
+  left: 32%;
+  transform: rotate(45deg);
+  border-color: rgba(255,255,255,.42);
+}
+
+.sobre-tech-mark span {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 50%;
+  background: #7ed957;
+  box-shadow: 0 0 32px rgba(126,217,87,.75);
+}
+
+.sobre-tech-mark span:nth-child(1) {
+  top: 18%;
+  left: 50%;
+}
+
+.sobre-tech-mark span:nth-child(2) {
+  right: 19%;
+  top: 50%;
+}
+
+.sobre-tech-mark span:nth-child(3) {
+  bottom: 18%;
+  left: 50%;
+}
+
+.sobre-solution-ring {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sobre-solution-ring article {
+  min-height: 190px;
+  padding: 26px;
+  display: grid;
+  align-content: end;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.055);
+}
+
+.sobre-solution-ring article:nth-child(3) {
+  grid-column: 1 / 3;
+}
+
+.sobre-solution-ring article:nth-child(4) {
+  grid-column: 3 / 4;
+}
+
+.sobre-solution-ring .sobre-ring-center {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  align-content: center;
+  justify-items: center;
+  min-height: 396px;
+  color: #06210f;
+  background: linear-gradient(145deg, #9cf279, #67ca47);
+}
+
+.sobre-ring-center img {
+  width: min(78%, 250px);
+  margin-bottom: 24px;
+  filter: brightness(0);
+}
+
+.sobre-solution-ring strong {
+  color: inherit;
+  font: 800 30px/1 "Advent Pro", sans-serif;
+}
+
+.sobre-solution-ring span {
+  margin-top: 10px;
+  color: rgba(255,255,255,.72);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.sobre-ring-center span {
+  color: rgba(6,33,15,.74);
+}
+
+.sobre-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sobre-solucoes-impacto {
+  background:
+    radial-gradient(circle at 86% 12%, rgba(126,217,87,.16), transparent 32%),
+    linear-gradient(180deg, #031b0e, #052412);
+}
+
+.sobre-impact-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.sobre-impact-solution {
+  min-height: 240px;
+  padding: 26px;
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.sobre-impact-solution:hover {
+  transform: translateY(-7px);
+  border-color: rgba(126,217,87,.38);
+  background: rgba(126,217,87,.105);
+}
+
+.sobre-impact-solution span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 26px;
+  border-radius: 15px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.sobre-impact-solution h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font: 800 33px/1 "Advent Pro", sans-serif;
+}
+
+.sobre-impact-solution p {
+  color: rgba(255,255,255,.74);
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+.sobre-impact-card,
+.sobre-final-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 34px;
+  padding: clamp(32px, 5vw, 58px);
+  border: 1px solid rgba(126,217,87,.2);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(126,217,87,.22), transparent 32%),
+    rgba(255,255,255,.06);
+}
+
+.sobre-impact-card h2 {
+  max-width: 640px;
+  margin: 12px 0 16px;
+  color: #fff;
+  font: 800 clamp(42px, 5vw, 74px)/.96 "Advent Pro", sans-serif;
+}
+
+.sobre-impact-card p {
+  max-width: 760px;
+  color: rgba(255,255,255,.78);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.sobre-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.sobre-futuro {
+  min-height: 68svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(126,217,87,.24), transparent 34%),
+    linear-gradient(180deg, #031b0e, #062f18);
+}
+
+.sobre-futuro h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre-future-lines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.sobre-future-lines span {
+  padding: 12px 16px;
+  border: 1px solid rgba(126,217,87,.2);
+  border-radius: 999px;
+  color: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.06);
+  font-size: 18px;
+}
+
+.sobre-final {
+  background: #f7faf8;
+  color: #06210f;
+}
+
+.sobre-final-card {
+  display: block;
+  color: #fff;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(126,217,87,.22), transparent 34%),
+    linear-gradient(135deg, #06210f, #0f5a2b);
+}
+
+.sobre-final-card h2 {
+  max-width: 760px;
+}
+
+.sobre-final-card .hero-actions {
+  margin-top: 26px;
+}
+
+@keyframes sobreSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1080px) {
+  .sobre-hero-grid,
+  .sobre-split,
+  .sobre-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-hero-visual {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .sobre-hero-copy {
+    max-width: 760px;
+  }
+
+  .sobre-hero-copy h1 {
+    max-width: 720px;
+    font-size: clamp(44px, 8vw, 68px);
+  }
+
+  .sobre-problem-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sobre-origin-grid,
+  .sobre-origin-story,
+  .sobre-origin-composition {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-origin-composition {
+    grid-template-areas:
+      "start"
+      "evolution"
+      "people";
+  }
+
+  .sobre-origin-composition::before {
+    display: none;
+  }
+
+  .origin-evolution,
+  .sobre-origin-text-block {
+    justify-self: stretch;
+    max-width: none;
+  }
+
+  .origin-evolution {
+    columns: auto;
+  }
+
+  .sobre-person-ana {
+    margin-left: 0;
+  }
+
+  .sobre-origin-story p {
+    min-height: auto;
+  }
+
+  .sobre-origin-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+
+  .sobre-origin-timeline::before {
+    display: none;
+  }
+
+  .sobre-origin-timeline article::before {
+    top: -18px;
+  }
+
+  .sobre-problem-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .sobre-solution-ring {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-impact-solutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sobre-solution-ring article,
+  .sobre-solution-ring article:nth-child(3),
+  .sobre-solution-ring article:nth-child(4),
+  .sobre-solution-ring .sobre-ring-center {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 190px;
+  }
+
+  .sobre-impact-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .sobre-hero {
+    padding: calc(var(--header-height) + 34px) 0 56px;
+  }
+
+  .sobre-hero-copy h1,
+  .sobre-copy h2,
+  .sobre-heading h2,
+  .sobre-futuro h2,
+  .sobre-final h2 {
+    font-size: clamp(34px, 10.8vw, 48px);
+    line-height: 1;
+  }
+
+  .sobre-hero-copy p,
+  .sobre-copy p,
+  .sobre-heading p {
+    font-size: 18px;
+  }
+
+  .sobre-orbit {
+    width: min(100%, 280px);
+  }
+
+  .sobre-human-panel {
+    min-height: auto;
+    padding-bottom: 28px;
+  }
+
+  .sobre-thread {
+    position: static;
+    margin-top: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-problem-grid,
+  .sobre-origin-timeline,
+  .sobre-connect-map,
+  .sobre-impact-solutions-grid,
+  .sobre-pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-impact-solution {
+    min-height: auto;
+  }
+
+  .sobre-origin-intro h2 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .sobre-origin-story {
+    padding: 22px;
+  }
+
+  .sobre-origin-panel {
+    padding: 22px;
+  }
+
+  .sobre-origin-composition {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .sobre-person,
+  .sobre-person-ana {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  .sobre-person-ana .sobre-person-figure {
+    order: -1;
+  }
+
+  .sobre-person-figure {
+    width: 82px;
+  }
+
+  .sobre-person strong {
+    font-size: 24px;
+  }
+
+  .sobre-person p {
+    font-size: 15px;
+  }
+
+  .sobre-origin-founder-note strong {
+    display: grid;
+    gap: 8px;
+    font-size: 24px;
+  }
+
+  .sobre-origin-timeline {
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .sobre-origin-timeline article {
+    min-height: auto;
+    padding: 20px 20px 20px 54px;
+  }
+
+  .sobre-origin-timeline article::before {
+    top: 24px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .sobre-connect-map::before {
+    inset: 10%;
+    border-radius: 28px;
+  }
+
+  .sobre-map-center {
+    order: -1;
+  }
+
+  .sobre-tech-mark {
+    min-height: 320px;
+  }
+
+  .sobre-impact-card,
+  .sobre-final-card {
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .sobre-inline-link,
+  .sobre-actions .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .sobre-future-lines {
+    display: grid;
+  }
+}
+
+/* SOLUCOES - ESBOCOS DE PAGINAS */
+
+.page-solution {
+  background: #031b0e;
+  color: #fff;
+}
+
+.page-solution .header {
+  background: rgba(0, 28, 13, .78);
+}
+
+.page-solution .menu > li > a.active {
+  color: #06210f;
+  background: #7ed957;
+}
+
+.solution-hero {
+  position: relative;
+  overflow: hidden;
+  padding: calc(var(--header-height) + 72px) 0 92px;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(126,217,87,.18), transparent 34%),
+    radial-gradient(circle at 10% 18%, rgba(0,168,89,.16), transparent 32%),
+    linear-gradient(135deg, #02150a, #06331a 52%, #0c4623);
+}
+
+.solution-easy .solution-hero {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(126,217,87,.22), transparent 34%),
+    linear-gradient(135deg, #f7fff9, #dff7e5 54%, #0f7a30);
+  color: #06210f;
+}
+
+.solution-solidario .solution-hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(140,82,255,.22), transparent 34%),
+    radial-gradient(circle at 8% 24%, rgba(126,217,87,.18), transparent 34%),
+    linear-gradient(135deg, #04120a, #102718 52%, #33204f);
+}
+
+.solution-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .62fr);
+  align-items: center;
+  gap: clamp(34px, 6vw, 88px);
+}
+
+.solution-copy h1 {
+  max-width: 850px;
+  margin: 18px 0 22px;
+  color: currentColor;
+  font: 800 clamp(46px, 6vw, 88px)/.94 "Advent Pro", sans-serif;
+  letter-spacing: 0;
+}
+
+.solution-copy p {
+  max-width: 720px;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.56;
+}
+
+.solution-easy .solution-copy p {
+  color: rgba(6,33,15,.78);
+}
+
+.solution-device {
+  display: grid;
+  justify-items: center;
+}
+
+.solution-phone {
+  width: min(100%, 350px);
+  min-height: 620px;
+  padding: 18px;
+  border: 10px solid #090f0b;
+  border-radius: 42px;
+  background: linear-gradient(180deg, #0d1511, #050806);
+  box-shadow: 0 34px 80px rgba(0,0,0,.42);
+}
+
+.solution-phone.light {
+  color: #06180d;
+  background: linear-gradient(180deg, #fff, #f4faf6);
+}
+
+.phone-status,
+.phone-header,
+.phone-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.phone-status {
+  margin-bottom: 20px;
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+}
+
+.solution-phone.light .phone-status {
+  color: rgba(6,24,13,.68);
+}
+
+.phone-header {
+  margin-bottom: 18px;
+}
+
+.phone-header small,
+.phone-card small {
+  display: block;
+  color: #7ed957;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.solution-phone.light .phone-header small,
+.solution-phone.light .phone-card small {
+  color: #0e7a2a;
+}
+
+.phone-header strong {
+  display: block;
+  margin-top: 6px;
+  color: currentColor;
+  font: 800 23px/1.05 "Advent Pro", sans-serif;
+}
+
+.phone-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.phone-card {
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 22px;
+  background: rgba(255,255,255,.07);
+}
+
+.phone-card.highlight,
+.phone-card.easy-highlight {
+  background: linear-gradient(145deg, #0e5c0b, #00a859);
+}
+
+.phone-card.dark {
+  background: rgba(255,255,255,.045);
+}
+
+.solution-phone.light .phone-card {
+  border-color: rgba(6,33,15,.1);
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(6,33,15,.08);
+}
+
+.phone-card strong {
+  display: block;
+  margin: 8px 0;
+  color: currentColor;
+  font: 800 25px/1.05 "Advent Pro", sans-serif;
+}
+
+.phone-card span {
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+}
+
+.solution-phone.light .phone-card span {
+  color: rgba(6,33,15,.62);
+}
+
+.phone-card button {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.phone-grid span {
+  display: grid;
+  place-items: center;
+  min-height: 70px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  color: currentColor;
+  background: rgba(255,255,255,.06);
+  font-weight: 800;
+}
+
+.solution-phone.light .phone-grid span {
+  border-color: rgba(6,33,15,.1);
+  background: #fff;
+}
+
+.solution-impact-panel {
+  width: min(100%, 430px);
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 86% 14%, rgba(140,82,255,.24), transparent 34%),
+    rgba(255,255,255,.06);
+  box-shadow: 0 34px 80px rgba(0,0,0,.34);
+}
+
+.solution-impact-panel img {
+  width: min(84%, 280px);
+  display: block;
+  margin: 0 auto 28px;
+}
+
+.impact-stat {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.impact-stat strong {
+  display: block;
+  color: #fff;
+  font: 800 28px/1 "Advent Pro", sans-serif;
+}
+
+.impact-stat span {
+  color: rgba(255,255,255,.72);
+  font-size: 16px;
+}
+
+.solution-section {
+  padding: clamp(78px, 10vw, 132px) 0;
+  background: #031b0e;
+}
+
+.solution-section:nth-of-type(odd) {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(0,168,89,.12), transparent 32%),
+    #052412;
+}
+
+.solution-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, .84fr);
+  gap: clamp(30px, 6vw, 82px);
+  align-items: start;
+}
+
+.solution-heading h2,
+.solution-final-card h2 {
+  max-width: 820px;
+  margin: 14px 0 0;
+  color: #fff;
+  font: 800 clamp(40px, 5.2vw, 76px)/.96 "Advent Pro", sans-serif;
+  letter-spacing: 0;
+}
+
+.solution-text-block {
+  display: grid;
+  gap: 18px;
+}
+
+.solution-text-block p {
+  color: rgba(255,255,255,.78);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.solution-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.solution-feature {
+  min-height: 260px;
+  padding: 26px;
+  border: 1px solid rgba(126,217,87,.18);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.solution-feature:hover {
+  transform: translateY(-7px);
+  border-color: rgba(126,217,87,.38);
+  background: rgba(126,217,87,.105);
+}
+
+.solution-feature span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 26px;
+  border-radius: 16px;
+  color: #06210f;
+  background: #7ed957;
+  font-weight: 900;
+}
+
+.solution-feature h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font: 800 31px/1 "Advent Pro", sans-serif;
+}
+
+.solution-feature p,
+.solution-steps p {
+  color: rgba(255,255,255,.74);
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+.solution-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.solution-steps article {
+  position: relative;
+  min-height: 210px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.055);
+}
+
+.solution-steps article::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  right: -14px;
+  width: 28px;
+  height: 2px;
+  background: #7ed957;
+}
+
+.solution-steps article:last-child::before {
+  display: none;
+}
+
+.solution-steps strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font: 800 29px/1 "Advent Pro", sans-serif;
+}
+
+.solution-final {
+  background: #f7faf8;
+}
+
+.solution-final-card {
+  padding: clamp(32px, 5vw, 58px);
+  border: 1px solid rgba(126,217,87,.2);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(126,217,87,.22), transparent 34%),
+    linear-gradient(135deg, #06210f, #0f5a2b);
+}
+
+.solution-final-card h2 {
+  margin-bottom: 26px;
+}
+
+@media (max-width: 1080px) {
+  .solution-hero-grid,
+  .solution-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-copy h1 {
+    max-width: 780px;
+    font-size: clamp(44px, 8vw, 70px);
+  }
+
+  .solution-feature-grid,
+  .solution-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .solution-steps article::before {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .solution-hero {
+    padding: calc(var(--header-height) + 36px) 0 60px;
+  }
+
+  .solution-copy h1,
+  .solution-heading h2,
+  .solution-final-card h2 {
+    font-size: clamp(36px, 11vw, 52px);
+    line-height: 1;
+  }
+
+  .solution-copy p,
+  .solution-text-block p {
+    font-size: 18px;
+  }
+
+  .solution-phone {
+    min-height: auto;
+  }
+
+  .solution-feature-grid,
+  .solution-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-feature,
+  .solution-steps article {
+    min-height: auto;
+  }
 }

@@ -18,17 +18,22 @@
 <a aria-label="Connect Vet do Brasil" class="brand" href="#home">
 <img alt="Connect Vet do Brasil" class="logo-header" src="assets/svg/P_B.svg"/>
 </a>
-<nav>
 <ul class="menu" id="menu">
-<li><a href="#ecossistema">Ecossistema</a></li>
-<li><a href="#connect-professional">Connect Professional</a></li>
-<li><a href="#connect-easy">Connect Easy</a></li>
-<li><a href="#solidario">Solidário</a></li>
-<li><a href="#desenvolvimento">Desenvolvimento</a></li>
-<li><a href="#parcerias">Parcerias</a></li>
-<li><a href="#contatos">Contatos</a></li>
+  <li><a href="index.html">Início</a></li>
+  <li><a href="pages/sobre.html">Sobre nós</a></li>
+
+  <li class="has-submenu">
+    <a href="#">Soluções</a>
+    <ul class="submenu">
+      <li><a href="pages/connect/professional.html">Professional</a></li>
+      <li><a href="pages/connect/easy.html">Easy</a></li>
+      <li><a href="pages/connect/solidario.html">Solidário</a></li>
+    </ul>
+  </li>
+
+  <li><a href="pages/parceiros.html">Parceiros</a></li>
+  <li><a href="pages/contato.html">Contato</a></li>
 </ul>
-</nav>
 <button aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" id="menuToggle" type="button">
 <span></span>
 <span></span>
@@ -382,7 +387,7 @@
         </p>
 
         <div class="profissional-buttons">
-          <a href="#contatos" class="btn btn-primary">Quero participar</a>
+          <a href="pages/contato.html" class="btn btn-primary">Quero participar</a>
           <a href="#desenvolvimento" class="btn btn-outline">Ver ferramentas</a>
         </div>
 
@@ -478,7 +483,7 @@
         </p>
 
         <div class="connect-easy-buttons">
-          <a href="#contatos" class="btn btn-primary">Quero conhecer</a>
+          <a href="pages/contato.html" class="btn btn-primary">Quero conhecer</a>
           <a href="#ecossistema" class="btn btn-outline">Ver ecossistema</a>
         </div>
 
@@ -567,8 +572,8 @@
         </p>
 
         <div class="solidario-buttons">
-          <a href="#contatos" class="btn btn-primary">Quero ajudar</a>
-          <a href="#contatos" class="btn btn-outline">Cadastrar ONG</a>
+          <a href="pages/contato.html" class="btn btn-primary">Quero ajudar</a>
+          <a href="pages/contato.html" class="btn btn-outline">Cadastrar ONG</a>
         </div>
 
         <div class="section-trust-pills dark" aria-label="Diferenciais do Connect Vet Solidário">
@@ -689,140 +694,13 @@
 </div>
 
 </section>
-<section class="section parcerias-premium" id="parcerias">
-  <div class="container parcerias-area">
-
-    <div class="parcerias-texto reveal">
-      <span class="eyebrow">Parcerias</span>
-
-      <h2>Parcerias que fortalecem o cuidado animal.</h2>
-
-      <p>
-        O Connect Vet do Brasil acredita em conexões reais com instituições,
-        empresas e pessoas que desejam gerar impacto positivo no setor animal.
-      </p>
-
-      <a class="btn btn-primary" href="#contatos">Quero fazer parte</a>
-    </div>
-
-    <div class="parceiro-destaque reveal">
-      <div class="parceiro-logo-box">
-        <img src="assets/img/aatan-logo-opt.webp" alt="Logo AATAN" decoding="async" height="754" loading="lazy" width="755">
-      </div>
-
-      <div class="parceiro-conteudo">
-        <span>Parceiro Oficial</span>
-        <h3>A.A.T.A.N.</h3>
-
-        <p class="parceiro-subtitle">
-          Associação Abrigo Temporário de Animais Necessitados.
-        </p>
-
-        <p>
-          A AATAN atua no acolhimento, proteção e apoio a animais em situação
-          de vulnerabilidade, fortalecendo ações de cuidado, adoção responsável
-          e conscientização.
-        </p>
-      </div>
-    </div>
-
-    <div class="parcerias-convite reveal">
-      <h3>Sua empresa ou instituição também pode fazer parte.</h3>
-
-      <p>
-        Clínicas, profissionais, pet shops, empresas, ONGs, apoiadores e
-        investidores podem integrar essa rede de colaboração para ampliar
-        oportunidades, visibilidade e impacto social.
-      </p>
-
-      <a class="btn btn-outline" href="#contatos">Entrar em contato</a>
-    </div>
-
-  </div>
-</section>
-<section class="section contato-premium" id="contatos">
-  <div class="container contato-grid">
-
-    <div class="contato-texto reveal">
-      <span class="eyebrow">Contatos</span>
-
-      <h2>FALE COM A NOSSA EQUIPE</h2>
-
-      <p>
-        Entre em contato para apresentar uma parceria, demonstrar interesse
-        no projeto ou conversar sobre participação como profissional, clínica,
-        pet shop, investidor ou parceiro estratégico.
-      </p>
-
-      <div class="contato-info">
-        <div>
-          <strong>E-mail</strong>
-          <a href="mailto:contato@connectvetdobrasil.com.br">contato@connectvetdobrasil.com.br</a>
-        </div>
-
-        <div>
-          <strong>WhatsApp</strong>
-          <a href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">Atendimento comercial e parcerias</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="contato-imagem reveal">
-      <div class="contato-glow"></div>
-      <img src="assets/icons/jorge.webp" alt="Contato Connect Vet do Brasil" decoding="async" height="900" loading="lazy" width="1600">
-    </div>
-
-    <form class="contact-form contato-form-premium reveal" id="contactForm">
-      <div class="form-row">
-        <div>
-          <label for="name">Nome</label>
-          <input id="name" name="name" placeholder="Seu nome" required type="text">
-        </div>
-
-        <div>
-          <label for="profile">Perfil</label>
-          <select id="profile" name="profile" required>
-            <option value="">Selecione</option>
-            <option>Tutor</option>
-            <option>Medico Veterinario</option>
-            <option>Profissional</option>
-            <option>Estabelecimento</option>
-            <option>ONG</option>
-            <option>Investidor</option>
-            <option>Parceiro estratégico</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div>
-          <label for="email">E-mail</label>
-          <input id="email" name="email" placeholder="seuemail@exemplo.com" required type="email">
-        </div>
-
-        <div>
-          <label for="phone">Telefone</label>
-          <input id="phone" name="phone" placeholder="(00) 00000-0000" type="tel">
-        </div>
-      </div>
-
-      <div>
-        <label for="message">Mensagem</label>
-        <textarea id="message" name="message" placeholder="Conte como deseja participar do projeto" required></textarea>
-      </div>
-
-      <button class="btn btn-primary" type="submit">Enviar mensagem</button>
-    </form>
-
-  </div>
-</section>
 </main>
 <footer class="footer">
   <div class="container footer-main">
     <div class="footer-brand">
-      <a aria-label="Voltar ao início" class="footer-logo" href="#home">
-        <img alt="Connect Vet do Brasil" src="assets/svg/P_B.svg">
-      </a>
+      <div class="footer-brand-visual" aria-hidden="true">
+        <img alt="" decoding="async" loading="lazy" src="assets/icons/Mia.webp">
+      </div>
       <p>Conectando cuidado, profissionais, inovação e impacto social em um único ecossistema.</p>
       <div class="footer-socials" aria-label="Redes sociais">
         <a aria-label="Instagram do Connect Vet" href="https://www.instagram.com/connectvetdobrasil/" rel="noopener noreferrer" target="_blank">
@@ -855,22 +733,34 @@
 
     <div class="footer-column">
       <strong>Conecte-se</strong>
-      <a href="#parcerias">Parcerias</a>
+      <a href="pages/parceiros.html">Parcerias</a>
       <a href="#desenvolvimento">Desenvolvimento</a>
-      <a href="#contatos">Fale com a equipe</a>
+      <a href="pages/contato.html">Fale com a equipe</a>
       <a href="mailto:contato@connectvetdobrasil.com.br">E-mail</a>
     </div>
 
     <div class="footer-cta">
       <span>Faça parte dessa transformação</span>
       <strong>O cuidado animal começa com uma boa conexão.</strong>
-      <a class="btn btn-primary" href="#contatos">Quero participar</a>
+      <a class="btn btn-primary" href="pages/contato.html">Quero participar</a>
     </div>
   </div>
 
   <div class="container footer-bottom">
-    <p><strong>Connect Vet do Brasil</strong> © 2026. Todos os direitos reservados.</p>
-    <p>Plataforma em desenvolvimento.</p>
+    <div class="footer-legal">
+      <div class="footer-connect-signature">
+        <img alt="Connect Vet do Brasil" src="assets/svg/P_B.svg">
+        <div>
+          <p><strong>Connect Vet do Brasil</strong> © 2026. Todos os direitos reservados.</p>
+          <p class="footer-founders">Kailane Sabrine · CEO &amp; Fundadora | Ana Paula · CEO &amp; Fundadora</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-tech-partner" aria-label="Parceira de desenvolvimento tecnológico">
+      <span>Desenvolvimento tecnológico em parceria com</span>
+      <img alt="LEHUB - Inteligência em Dados e Fluxos Operacionais" src="assets/img/lehub-logo-transparent.png">
+    </div>
+    <p class="footer-platform">Plataforma em desenvolvimento.</p>
   </div>
 </footer>
 <a aria-label="Conversar pelo WhatsApp" class="whatsapp-float" href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">
